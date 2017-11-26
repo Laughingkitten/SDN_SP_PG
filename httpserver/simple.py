@@ -9,7 +9,9 @@ def callback_method(query):
     return ['Hello', 'World!', 'with', query]
 
 def exe_scan():
+    res = 0
     try:
+        #cmd='sudo python /home/pi/httpserver/print.py'
         cmd='sudo python /home/pi/httpserver/test.py'
         res = subprocess.check_output(cmd.split(" "))
         #print(res)

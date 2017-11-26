@@ -26,7 +26,7 @@ def judge(tag):
 
 
 #USBカードリーダーと接続
-clf = nfc.ContactlessFrontend('usb')
+clf = nfc.ContactlessFrontend('usb:054c:06c3')
 
 #恐らく、タッチされた時に呼び出す関数の設定
 rdwr = {'on-connect':judge}
