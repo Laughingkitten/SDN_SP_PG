@@ -96,14 +96,14 @@ def connected(tag):
 
 def send_server(idm,no):
     try:
-	producer = KafkaProducer(bootstrap_servers='10.0.2.4')
+	producer = KafkaProducer(bootstrap_servers='MQ_IPADDRESS')
         tdatetime = dt.now()
         strtime = tdatetime.strftime('%Y:%m:%d:%H:%M:%S')
         print idm
         print no
-        idmetc = ('%s,322,%d'% (idm,no))
+        idmetc = ('%s,ROOMID,%d'% (idm,no))
         merge = idmetc+","+str(strtime)
-        producer.send('test0419',b'%s' % str(merge))
+        producer.send('TOPIC_NAME',b'%s' % str(merge))
         producer.flush()
         producer.close()
         #送信完了音
