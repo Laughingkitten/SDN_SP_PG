@@ -1,0 +1,3 @@
+[paths]
+my_server = http://ie.u-ryukyu.ac.jp/hg/y15/index.cgi/home/hg/y15/e155722/attend/
+my_server:pushurl = ssh://e155722@yomitan.ie.u-ryukyu.ac.jp//home/hg/y15/e155722/attend
